@@ -11,7 +11,7 @@ const GREETING_TEXT = new Map([
   [4, "Whoa, Early Bird"],
 ]);
 GREETING_TEXT.keys();
-export const Clock = () => {
+export const Clock = ({ updateBgPath }) => {
   const controller = useRef(null);
   const [showPanel, setShowPanel] = useState(false);
   const [time, setTime] = useState(null);
@@ -74,6 +74,7 @@ export const Clock = () => {
         calenderObj.dayOfYear = dayOfYear;
         calenderObj.weekNumber = Math.floor(dayOfYear / 7);
         setCalender(calenderObj);
+        updateBgPath();
       }
       setTime(timeObj);
     }

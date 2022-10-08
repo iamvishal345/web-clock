@@ -4,11 +4,11 @@ import { Clock } from "./components/Clock";
 import { Quote } from "./components/Quote";
 
 const BG_PATH = new Map([
-  [22, "/images/night"],
-  [18, "/images/evening"],
-  [12, "/images/afternoon"],
-  [6, "/images/morning"],
-  [4, "/images/earlyMorning"],
+  [22, "/web-clock/images/night"],
+  [18, "/web-clock/images/evening"],
+  [12, "/web-clock/images/afternoon"],
+  [6, "/web-clock/images/morning"],
+  [4, "/web-clock/images/earlyMorning"],
 ]);
 const getBgPath = () => {
   const hour = new Date().getHours();
