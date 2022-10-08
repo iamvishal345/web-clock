@@ -1,0 +1,19 @@
+.app {
+  --bg-image: url("/images/evening.webp");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.2)),
+    var(--bg-image);
+
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 479px) {
+  .app {
+    padding: 3rem;
+  }
+}
