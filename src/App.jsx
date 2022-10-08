@@ -8,7 +8,7 @@ const BG_PATH = new Map([
   [18, "/web-clock/images/evening"],
   [12, "/web-clock/images/afternoon"],
   [6, "/web-clock/images/morning"],
-  [4, "/web-clock/images/earlyMorning"],
+  [0, "/web-clock/images/earlyMorning"],
 ]);
 const getBgPath = () => {
   const hour = new Date().getHours();

@@ -8,7 +8,7 @@ const GREETING_TEXT = new Map([
   [18, "Good Evening"],
   [12, "Good Afternoon"],
   [6, "Good Morning"],
-  [4, "Whoa, Early Bird"],
+  [0, "Whoa, Early Bird"],
 ]);
 GREETING_TEXT.keys();
 export const Clock = ({ updateBgPath }) => {
