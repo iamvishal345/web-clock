@@ -63,7 +63,7 @@ export const Clock = ({ updateBgPath }) => {
             calenderObj[type] = value;
           }
         });
-        calenderObj.dayOfWeek = current.getDay();
+        calenderObj.dayOfWeek = current.getDay() + 1;
         const dayOfYear = Math.floor(
           (current - new Date(current.getFullYear(), 0, 0)) /
             1000 /
@@ -72,7 +72,7 @@ export const Clock = ({ updateBgPath }) => {
             24
         );
         calenderObj.dayOfYear = dayOfYear;
-        calenderObj.weekNumber = Math.floor(dayOfYear / 7);
+        calenderObj.weekNumber = Math.ceil((dayOfYear - 1) / 7);
         setCalender(calenderObj);
         updateBgPath();
       }
