@@ -1,0 +1,4 @@
+tabs: ["README.md", "src/App.jsx"]
+terminal-one: |
+  yarn install
+  yarn dev
