@@ -22,10 +22,10 @@ export const Clock = ({ updateBgPath }) => {
     controller.current?.abort();
     controller.current = new AbortController();
     try {
-      const res = await fetch("https://ipv6.jsonip.com/", {
+      const res = await fetch("https://api64.ipify.org/", {
         signal: controller.current.signal,
       });
-      const { ip } = await res.json();
+      const ip = await res.text();
       const timeZoneRes = await fetch(`https://geolocation-db.com/json/${ip}`, {
         signal: controller.current.signal,
       });
